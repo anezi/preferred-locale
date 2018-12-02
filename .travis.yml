@@ -13,6 +13,8 @@ env:
 
 before_script:
     - composer update --prefer-source $PREFER_LOWEST
+    - composer show
+    - phpunit --version
 
 script:
-    - vendor/bin/phpunit
+    - phpunit

@@ -3,7 +3,6 @@
 namespace Anezi\PreferredLocale\Tests\EventSubscriber;
 
 use Anezi\PreferredLocale\EventSubscriber\LocaleListener;
-use PHPUnit\Framework\TestCase;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +17,7 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-class LocalListenerTest extends TestCase
+class LocalListenerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @expectedException \UnexpectedValueException
