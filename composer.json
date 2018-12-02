@@ -1,7 +1,13 @@
 {
   "name": "anezi/preferred-locale-event-subscriber",
   "description": "Automatic selection of user's preferred locale",
-  "type": "symfony-extension symfony-subscriber locale php",
+  "type": "library",
+  "keywords": [
+    "symfony-extension",
+    "symfony-subscriber",
+    "locale",
+    "php"
+  ],
   "license": "MIT",
   "authors": [
     {
