@@ -1,5 +1,5 @@
 {
-  "name": "anezi/preferred-locale-event-subscriber",
+  "name": "anezi/preferred-locale",
   "description": "Automatic selection of user's preferred locale",
   "type": "library",
   "keywords": [
