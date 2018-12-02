@@ -15,4 +15,4 @@ before_script:
     - composer update --prefer-source $PREFER_LOWEST
 
 script:
-    - ./bin/phpunit
+    - vendor/bin/phpunit
