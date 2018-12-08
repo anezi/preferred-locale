@@ -106,6 +106,19 @@ class LocalListenerTest extends TestCase
         $this->assertPath('/fr', $listener, $event);
     }
 
+    public function testFixLocale(): void
+    {
+        $listener = $this->createListener('fr|fr_BE', 'fr_BE', false);
+
+        $event = $this->createEvent('*', HttpKernelInterface::MASTER_REQUEST, '/fr-be/page');
+
+        $event->getRequest()->setLocale('fr-be');
+
+        $listener->onKernelRequest($event);
+
+        $this->assertSame('fr_BE', $event->getRequest()->getLocale());
+    }
+
     private function createListener(string $locales, ?string $defaultLocale, ?bool $ignoreDefaultLocale = null): LocaleListener
     {
         $routes = new RouteCollection();
